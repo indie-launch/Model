@@ -1,0 +1,30 @@
+# Core DL + HF stack
+torch>=2.2
+transformers>=4.40
+accelerate>=0.31
+huggingface-hub>=0.24
+safetensors>=0.4
+tokenizers>=0.15
+sentencepiece>=0.2
+
+# Parameter-efficient finetuning + 4-bit/8-bit (optional but common)
+peft>=0.11
+bitsandbytes>=0.43
+
+# Datasets, evaluation, and utilities
+datasets>=2.20
+evaluate>=0.4.1
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.4
+tqdm>=4.66
+einops>=0.7
+pyyaml>=6.0
+rich>=13.7
+typer>=0.12
+python-dotenv>=1.0
+
+# Notebooks / viz (repo has .ipynb files)
+jupyterlab>=4.2
+ipykernel>=6.29
+matplotlib>=3.8
