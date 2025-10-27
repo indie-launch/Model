@@ -122,26 +122,6 @@ Argument behavior and MAE calculation are implemented in the script.
 ├── docker-shell.sh         # helper: build/run with venv & caches
 └── steam_out/              # outputs from preprocessing (created later)
 ```
-
----
-
-## Notes & Tips
-
-- **Determinism:** use `--seed` in preprocessing; set seeds in training if needed.  
-- **Tokenizer padding:** training collator pads **labels** with `-100` to avoid loss on padding.  
-- **Mixed precision:** `bf16` used if supported; otherwise `fp16` on CUDA.  
-- **Adapters vs full model:** `infer_model.py` auto-detects adapter directories and requires `--base_model` in that case.
-
----
-
-## Milestone 3 (Midterm) — What to Show
-
-- **Problem & Audience:** why Steam price prediction matters, who uses it.  
-- **Solution demo:** show preprocessing output, training command, and a couple of inference examples (single + batch with MAE).  
-- **Infra:** Dockerized env; optional serverless (Modal/Cloud Run) later.  
-- **Scalability:** QLoRA for memory efficiency; HF cache; autoscaling-ready containers.  
-- **Future work:** alternative targets (tiers), additional signals (wishlists), model eval beyond MAE.
-
 ---
 
 **License:** choose MIT/Apache-2.0 and add a `LICENSE` file.
