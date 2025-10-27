@@ -1,5 +1,4 @@
-README
-This repo fine-tunes a Qwen LLM to predict Steam game prices from metadata and review stats. The workflow centers on three scripts:
+## This repo fine-tunes a Qwen LLM to predict Steam game prices from metadata and review stats. The workflow centers on three scripts:
 preprocess_data.py — build training/validation JSONL + numeric features
 finetune.py — fine-tune a causal LLM (LoRA/QLoRA optional)
 infer_model.py — run single/batch inference, compute MAE on batch
