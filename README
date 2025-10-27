@@ -1,1 +1,17 @@
 README
+This repo fine-tunes a Qwen LLM to predict Steam game prices from metadata and review stats. The workflow centers on three scripts:
+preprocess_data.py — build training/validation JSONL + numeric features
+finetune.py — fine-tune a causal LLM (LoRA/QLoRA optional)
+infer_model.py — run single/batch inference, compute MAE on batch
+
+Quickstart
+# Clone
+git clone https://github.com/indie-launch/Model.git
+cd Model
+
+# (Recommended) Docker
+chmod +x docker-shell.sh
+./docker-shell.sh  # opens a shell with the venv activated
+
+# Or: Jupyter
+./docker-shell.sh jupyter lab --LabApp.token='' --ip=0.0.0.0 --no-browser
